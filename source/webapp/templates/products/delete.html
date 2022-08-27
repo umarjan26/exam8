@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Удаление товара
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <form method="POST">
+            {% csrf_token %}
+            <h2 class="text-danger mt-3">Удалить товар "{{ product.name }}"</h2>
+            <input class="btn btn-danger w-30 mt-4" type="submit" value="Да">
+        </form>
+        <a class="my-3 btn btn-danger w-30" href="{% url "webapp:product_view" product.pk %}">Нет</a>
+    </div>
+
+{% endblock %}

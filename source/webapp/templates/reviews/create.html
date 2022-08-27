@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Редактирование товара
+    Добавление отзыва
 {% endblock %}
 
 {% block nav %}
@@ -10,12 +10,12 @@
 
 {% block  content %}
     <div class="container">
-        <div class="my-5">
-            <h1 class="text-danger">Редактирование товара</h1>
+        <div class=" my-5">
+            <h1 class="text-danger">Добавление нового отзыва</h1>
         </div>
         <div>
             <form method="post">
-                {% include 'partial/form.html' with button_text='Изменить' %}
+                {% include 'partial/form.html' with button_text='Создать' %}
             </form>
         </div>
         <div class="my-3">

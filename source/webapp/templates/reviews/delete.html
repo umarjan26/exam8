@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Удаление отзыва
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <form method="POST">
+            {% csrf_token %}
+            <h2 class="text-danger mt-3">Удалить отзыв "{{ review.text }}"</h2>
+            <h3 class="text-danger  my-3">{{ review.grade }}</h3>
+            <input class="btn btn-danger w-50 mt-4" type="submit" value="Да">
+        </form>
+        <a class="my-3 btn btn-danger w-50" href="{% url "webapp:product_view" review.product.pk %}">Нет</a>
+    </div>
+
+{% endblock %}

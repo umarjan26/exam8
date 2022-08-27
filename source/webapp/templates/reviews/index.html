@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Все отзывы
+{% endblock %}
+
+{% block content %}
+    <header>
+        <div class="container text-center text-primary my-5">
+            <h1>Все отзывы</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+            {% for review in reviews %}
+                    <div class="col my-2">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Отзыв № {{ review.id }}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Автор: <a
+                                        href="{% url 'accounts:detail' review.author.id %}">{{ review.author.first_name }}</a>
+                                </h6>
+                                <h6 class="card-subtitle mb-2 text-muted">Почта: <a
+                                        href="{% url 'accounts:detail' review.author.id %}">{{ review.author.email }}</a>
+                                </h6>
+                                <h6 class="card-subtitle mb-2 text-muted">Текст: {{ review.text }}</h6>
+                                <h6 class="card-subtitle mb-2 text-muted">Оценка: {{ review.grade }}</h6>
+                                <a href="{% url "webapp:review_update_moder" review.pk %}" class="card-link">Редактировать</a>
+                                <a href="{% url "webapp:review_delete" review.pk %}" class="card-link">Удалить</a>
+                            </div>
+                        </div>
+                    </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

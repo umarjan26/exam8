@@ -4,3 +4,22 @@
     Создание товара
 {% endblock %}
 
+{% block nav %}
+
+{% endblock %}
+
+{% block  content %}
+    <div class="container">
+        <div class=" my-5">
+            <h1 class="text-danger">Создание нового товара</h1>
+        </div>
+        <div>
+            <form method="post">
+                {% include 'partial/form.html' with button_text='Создать' %}
+            </form>
+        </div>
+        <div class="my-3">
+            <a class="btn btn-danger w-50" href={% url 'webapp:product_index' %}>Отмена</a>
+        </div>
+    </div>
+{% endblock %}
