@@ -11,15 +11,15 @@
         </div>
     </header>
     <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 justify-content-center">
+        <div class="row-cols-sm-2 row-cols-md-5 row-cols-lg-1">
             {% for product in products %}
-                <div class="col my-2">
-                    <div class="card h-100">
+                <div class="col my-5">
+                    <div class="">
                         <div class="card-body">
-                            <h5 class="card-title">Товар# {{ product.id }}</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Название: {{ product.name }}</h6>
-                            <h6 class="card-subtitle mb-2 text-muted">Категория: {{ product.category }}</h6>
-                            <h6 class="card-subtitle mb-2 text-muted">Средняя оценка: {{ product.average }}</h6>
+                            <h5 class="card-title text-primary">Товар: {{ product.id }}</h5>
+                            <h6 class="card-subtitle mt-2 mb-3 text-danger ">Название: {{ product.name }}</h6>
+                            <h6 class="card-subtitle mt-2 mb-3 text-danger">Категория: {{ product.category }}</h6>
+                            <h6 class="card-subtitle mt-2 mb-3 text-danger">Средняя оценка: {{ product.average }}</h6>
                             <a href="{% url "webapp:product_view" product.pk %}" class="card-link">Подробнее...</a>
                         </div>
                     </div>
