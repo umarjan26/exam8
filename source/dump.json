@@ -1,0 +1,120 @@
+[
+{
+  "model": "webapp.product",
+  "pk": 2,
+  "fields": {
+    "name": "umar2",
+    "category": "toys",
+    "description": "umar2s"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 3,
+  "fields": {
+    "name": "umar3",
+    "category": "cars",
+    "description": "umar3"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 4,
+  "fields": {
+    "name": "umar5",
+    "category": "clothes",
+    "description": "ddd"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 8,
+  "fields": {
+    "author": 1,
+    "product": 2,
+    "text": "ss",
+    "grade": 1,
+    "status": false,
+    "created_at": "2022-08-27T13:19:46.392Z",
+    "updated_at": "2022-08-27T13:19:46.392Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 10,
+  "fields": {
+    "author": 1,
+    "product": 2,
+    "text": "ssssss",
+    "grade": 2,
+    "status": true,
+    "created_at": "2022-08-27T13:22:50.045Z",
+    "updated_at": "2022-08-27T13:22:50.045Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 12,
+  "fields": {
+    "author": 1,
+    "product": 3,
+    "text": "ds",
+    "grade": 2,
+    "status": false,
+    "created_at": "2022-08-27T13:36:39.501Z",
+    "updated_at": "2022-08-27T13:36:39.501Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 14,
+  "fields": {
+    "author": 1,
+    "product": 4,
+    "text": "daa",
+    "grade": 1,
+    "status": false,
+    "created_at": "2022-08-27T14:39:03.596Z",
+    "updated_at": "2022-08-27T14:39:03.596Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 15,
+  "fields": {
+    "author": 1,
+    "product": 4,
+    "text": "adfsd",
+    "grade": 4,
+    "status": true,
+    "created_at": "2022-08-27T14:43:24.705Z",
+    "updated_at": "2022-08-27T14:43:24.705Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 16,
+  "fields": {
+    "author": 1,
+    "product": 3,
+    "text": "dfs",
+    "grade": 2,
+    "status": true,
+    "created_at": "2022-08-27T14:43:37.001Z",
+    "updated_at": "2022-08-27T14:43:37.001Z"
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 17,
+  "fields": {
+    "author": 2,
+    "product": 2,
+    "text": "csd",
+    "grade": 2,
+    "status": false,
+    "created_at": "2022-08-27T14:51:37.748Z",
+    "updated_at": "2022-08-27T14:51:37.748Z"
+  }
+}
+]
