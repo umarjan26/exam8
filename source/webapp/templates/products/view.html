@@ -55,8 +55,13 @@
                                         <h6 class="card-subtitle mb-2 text-primary">Почта: <a href="{% url 'accounts:detail' review.author.id %}">{{ review.author.email }}</a></h6>
                                         <h6 class="card-subtitle mb-2 text-primary">Текст: {{ review.text }}</h6>
                                         <h6 class="card-subtitle mb-2 text-primary">Оценка: {{ review.grade }}</h6>
-                                        <a href="{% url "webapp:review_update" review.pk %}" class="card-link">Редактировать</a>
-                                        <a href="{% url "webapp:review_delete" review.pk %}" class="card-link">Удалить</a>
+                                        <p> редактирование <a href="{% url "webapp:review_update" review.pk %}"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-aspect-ratio-fill" viewBox="0 0 16 16">
+  <path d="M0 12.5v-9A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5zM2.5 4a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 1 0V5h2.5a.5.5 0 0 0 0-1h-3zm11 8a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-1 0V11h-2.5a.5.5 0 0 0 0 1h3z"/>
+</svg></a>удаление  <a href="{% url "webapp:review_delete" review.pk %}"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+  <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717L5.07 1.243zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3z"/>
+</svg></a></p>
+
+
                                     </div>
                                 </div>
                             </div>

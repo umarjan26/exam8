@@ -8,10 +8,7 @@ STATUS_CHOICES = [('toys', 'игрушки'), ('cars', 'машина'), ('phone'
 
 class Product(models.Model):
     name = models.CharField(max_length=100, verbose_name='Название')
-    category = models.CharField(max_length=100,
-                                choices=STATUS_CHOICES,
-                                default=STATUS_CHOICES[0][0],
-                                verbose_name='Категория')
+    category = models.CharField(max_length=100,choices=STATUS_CHOICES,default=STATUS_CHOICES[0][0], verbose_name='Категория')
     description = models.TextField(max_length=2000, verbose_name='Описание', null=True, blank=True)
 
 
@@ -35,15 +32,8 @@ class Product(models.Model):
 
 
 class Review(models.Model):
-    author = models.ForeignKey(User,
-                               on_delete=models.CASCADE,
-                               default=1,
-                               verbose_name='Автор',
-                               related_name='reviews')
-    product = models.ForeignKey('webapp.Product',
-                                on_delete=models.CASCADE,
-                                verbose_name='Товар',
-                                related_name='reviews')
+    author = models.ForeignKey(User, on_delete=models.CASCADE, default=1, verbose_name='Автор', related_name='reviews')
+    product = models.ForeignKey('webapp.Product',  on_delete=models.CASCADE, verbose_name='Товар',  related_name='reviews')
     text = models.TextField(max_length=2000, verbose_name='Текст отзыва')
     grade = models.IntegerField(verbose_name='Оценка')
     status = models.BooleanField(verbose_name='Статус', default=False)
