@@ -1,0 +1,19 @@
+{% if not fields_only %}
+    {% csrf_token %}
+{% endif %}
+
+{% for error in form.non_field_errors %}
+    <p class="text-danger">{{ error }}</p>
+{% endfor %}
+
+{% for field in form %}
+    <p class="m-0 pb-2"><label class="pt-3" for="{{ field.id_for_label }}">{{ field.label }}</label></p>
+    {% for error in field.errors %}
+        <p class="text-danger">{{ error }}</p>
+    {% endfor %}
+    {{ field }}
+{% endfor %}
+
+{% if not fields_only %}
+    <input class="btn btn-success w-100 mt-4" type="submit" value="{{ button_text }}"/>
+{% endif %}

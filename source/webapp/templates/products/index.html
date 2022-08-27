@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Products
+{% endblock %}
+
+{% block content %}
+    <header>
+        <div class="container text-center text-primary my-5">
+            <h1>Products</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 justify-content-center">
+            {% for product in products %}
+                <div class="col my-2">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Товар# {{ product.id }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Название: {{ product.name }}</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">Категория: {{ product.category }}</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">Средняя оценка: {{ product.average }}</h6>
+                            <a href="{% url "webapp:product_view" product.pk %}" class="card-link">Подробнее...</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
